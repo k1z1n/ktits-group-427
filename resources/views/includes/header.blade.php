@@ -8,7 +8,7 @@
             @auth
 
                 <li><a href="{{ route('view.cart') }}">Корзина</a></li>
-
+                <li><a href="{{ route('view.profile') }}">Профиль</a></li>
                 <li><a href="{{ route('create') }}">Добавить товар</a></li>
                 <form action="{{ route('logout') }}" method="post">
                     @csrf

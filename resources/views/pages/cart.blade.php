@@ -94,9 +94,14 @@
         </div>
         <div class="cart-summary">
             <h3>Общая сумма: <span id="total-price">{{ $total }}</span> руб.</h3>
-            <button onclick="checkout()">Оформить заказ</button>
+            <form action="{{ route('create.order') }}" method="post">
+                @csrf
+                <button>Оформить заказ</button>
+            </form>
         </div>
     </div>
+
+
 
 @endsection
 

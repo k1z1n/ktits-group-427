@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -43,4 +44,19 @@ Route::middleware('check.auth')->group(function () {
     Route::post('/cart/count/add/{cartId}', [CartController::class, 'addCount'])->name('cart.count.add');
 
     Route::post('/logout', [UserController::class, 'logout'])->name('logout');
+    Route::get('/profile', [OrderController::class, 'showProfile'])->name('view.profile');
+    Route::post('/create/order', [OrderController::class, 'createOrder'])->name('create.order');
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
